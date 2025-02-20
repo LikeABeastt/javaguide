@@ -10,6 +10,12 @@
     <header>
         <h1>Java Programming Guide</h1>
         <p>Master the fundamentals of Java programming</p>
+        <div id="progress-tracker">
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <span id="progress-text">0% Complete</span>
+        </div>
     </header>
 
     <nav>
@@ -17,67 +23,76 @@
         <a href="#basics" class="nav-link">Java Basics</a>
         <a href="#oop" class="nav-link">OOP Concepts</a>
         <a href="#exercises" class="nav-link">Practice</a>
+        <a href="#challenges" class="nav-link">Challenges</a>
+        <a href="#quiz" class="nav-link">Quiz</a>
     </nav>
 
     <div class="container">
-        <section id="basics">
-            <h2>Java Fundamentals</h2>
-            <div class="card">
-                <h3>Getting Started with Java</h3>
-                <p>Java is a class-based, object-oriented programming language designed to be platform-independent.</p>
-                <div class="code-example" id="firstExample">
-                    public class HelloWorld {
-                        public static void main(String[] args) {
-                            System.out.println("Hello, Java!");
-                        }
-                    }
+        <!-- Previous sections remain the same -->
+        
+        <section id="challenges" class="interactive-section">
+            <h2>Coding Challenges</h2>
+            <div class="card challenge-card">
+                <h3>Challenge 1: String Manipulation</h3>
+                <div class="challenge-description">
+                    <p>Create a method that reverses a string without using the StringBuilder class.</p>
+                    <div class="difficulty-badge">Easy</div>
                 </div>
-                <button class="run-btn" onclick="runCode('firstExample')">Run Code</button>
-            </div>
-
-            <div class="card">
-                <h3>Basic Java Syntax</h3>
-                <ul class="feature-list">
-                    <li>Variables and Data Types</li>
-                    <li>Control Structures</li>
-                    <li>Methods and Functions</li>
-                    <li>Arrays and Collections</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="oop">
-            <h2>Object-Oriented Programming</h2>
-            <div class="card">
-                <h3>Core OOP Concepts</h3>
-                <div class="concept-grid">
-                    <div class="concept">
-                        <h4>Encapsulation</h4>
-                        <p>Bundling data and methods that operate on that data within a single unit.</p>
-                    </div>
-                    <div class="concept">
-                        <h4>Inheritance</h4>
-                        <p>Creating new classes that are built upon existing classes.</p>
-                    </div>
-                    <div class="concept">
-                        <h4>Polymorphism</h4>
-                        <p>The ability to present the same interface for different data types.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="exercises">
-            <h2>Practice Exercises</h2>
-            <div class="card">
-                <h3>Try It Yourself</h3>
                 <div class="code-editor">
-                    <textarea id="codeInput" rows="10" placeholder="Write your Java code here..."></textarea>
-                    <button onclick="runUserCode()">Run Your Code</button>
+                    <textarea id="challenge1Code" class="challenge-input" rows="10">public class StringReversal {
+    public static String reverse(String input) {
+        // Your code here
+    }
+}</textarea>
+                    <button onclick="testChallenge(1)">Test Solution</button>
+                    <button onclick="showHint(1)" class="hint-btn">Get Hint</button>
                 </div>
-                <div id="output" class="output-console"></div>
+                <div id="challenge1Output" class="output-console"></div>
+            </div>
+
+            <div class="card challenge-card">
+                <h3>Challenge 2: Array Processing</h3>
+                <div class="challenge-description">
+                    <p>Implement a method to find the second largest number in an array.</p>
+                    <div class="difficulty-badge">Medium</div>
+                </div>
+                <div class="code-editor">
+                    <textarea id="challenge2Code" class="challenge-input" rows="10">public class ArrayProcessor {
+    public static int findSecondLargest(int[] array) {
+        // Your code here
+    }
+}</textarea>
+                    <button onclick="testChallenge(2)">Test Solution</button>
+                    <button onclick="showHint(2)" class="hint-btn">Get Hint</button>
+                </div>
+                <div id="challenge2Output" class="output-console"></div>
             </div>
         </section>
+
+        <section id="quiz" class="interactive-section">
+            <h2>Java Knowledge Quiz</h2>
+            <div class="card quiz-card">
+                <div id="quiz-container">
+                    <div id="quiz-progress">Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
+                    <div id="question-container"></div>
+                    <div id="options-container"></div>
+                    <button id="submit-answer" onclick="submitAnswer()">Submit Answer</button>
+                    <div id="quiz-feedback"></div>
+                </div>
+                <div id="quiz-results" style="display: none;">
+                    <h3>Quiz Results</h3>
+                    <div id="score-display"></div>
+                    <button onclick="restartQuiz()">Try Again</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="achievement-popup" class="achievement-popup">
+        <div class="achievement-content">
+            <h3>Achievement Unlocked! 🏆</h3>
+            <p id="achievement-text"></p>
+        </div>
     </div>
 
     <footer>
@@ -87,5 +102,4 @@
     <script src="script.js"></script>
 </body>
 </html>
-
 
