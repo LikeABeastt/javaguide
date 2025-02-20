@@ -156,3 +156,156 @@ footer {
     }
 }
 
+
+
+/* Previous styles remain the same */
+
+/* New Interactive Features Styling */
+.interactive-section {
+    margin-bottom: 3rem;
+}
+
+/* Progress Tracker */
+#progress-tracker {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+#progress-text {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Challenge Cards */
+.challenge-card {
+    border-left: 4px solid #1976d2;
+}
+
+.challenge-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.difficulty-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.difficulty-badge:contains("Easy") {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.difficulty-badge:contains("Medium") {
+    background-color: #FF9800;
+    color: white;
+}
+
+.difficulty-badge:contains("Hard") {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Quiz Styling */
+.quiz-card {
+    border-left: 4px solid #9C27B0;
+}
+
+#quiz-container {
+    padding: 1rem;
+}
+
+#quiz-progress {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quiz-option:hover {
+    background-color: #e3f2fd;
+    border-color: #1976d2;
+}
+
+.quiz-option.selected {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1565c0;
+}
+
+/* Achievement Popup */
+.achievement-popup {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.achievement-popup.show {
+    right: 20px;
+}
+
+/* Hint Button */
+.hint-btn {
+    background-color: #FF9800;
+    margin-left: 0.5rem;
+}
+
+.hint-btn:hover {
+    background-color: #F57C00;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+    .challenge-description {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .difficulty-badge {
+        margin-top: 0.5rem;
+    }
+
+    .progress-bar {
+        width: 80%;
+    }
+}
+
