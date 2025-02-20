@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java Programming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Java Programming Guide</h1>
+        <p>Master the fundamentals of Java programming</p>
+    </header>
+
+    <nav>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#basics" class="nav-link">Java Basics</a>
+        <a href="#oop" class="nav-link">OOP Concepts</a>
+        <a href="#exercises" class="nav-link">Practice</a>
+    </nav>
+
+    <div class="container">
+        <section id="basics">
+            <h2>Java Fundamentals</h2>
+            <div class="card">
+                <h3>Getting Started with Java</h3>
+                <p>Java is a class-based, object-oriented programming language designed to be platform-independent.</p>
+                <div class="code-example" id="firstExample">
+                    public class HelloWorld {
+                        public static void main(String[] args) {
+                            System.out.println("Hello, Java!");
+                        }
+                    }
+                </div>
+                <button class="run-btn" onclick="runCode('firstExample')">Run Code</button>
+            </div>
+
+            <div class="card">
+                <h3>Basic Java Syntax</h3>
+                <ul class="feature-list">
+                    <li>Variables and Data Types</li>
+                    <li>Control Structures</li>
+                    <li>Methods and Functions</li>
+                    <li>Arrays and Collections</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="oop">
+            <h2>Object-Oriented Programming</h2>
+            <div class="card">
+                <h3>Core OOP Concepts</h3>
+                <div class="concept-grid">
+                    <div class="concept">
+                        <h4>Encapsulation</h4>
+                        <p>Bundling data and methods that operate on that data within a single unit.</p>
+                    </div>
+                    <div class="concept">
+                        <h4>Inheritance</h4>
+                        <p>Creating new classes that are built upon existing classes.</p>
+                    </div>
+                    <div class="concept">
+                        <h4>Polymorphism</h4>
+                        <p>The ability to present the same interface for different data types.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exercises">
+            <h2>Practice Exercises</h2>
+            <div class="card">
+                <h3>Try It Yourself</h3>
+                <div class="code-editor">
+                    <textarea id="codeInput" rows="10" placeholder="Write your Java code here..."></textarea>
+                    <button onclick="runUserCode()">Run Your Code</button>
+                </div>
+                <div id="output" class="output-console"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Created for educational purposes | Java Programming Guide 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
